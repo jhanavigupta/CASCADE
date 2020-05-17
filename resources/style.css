@@ -10,31 +10,26 @@
 
 html,
 body{
-    background-color:#0A0A0A;
-    color:#fff;
+    background-color:#fff;
+    color:#000;
     font-family: 'Muli', sans-serif;
     font-weight: 300;
     max-width: 100%;
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
 }
 
 /* --------------------------------- */
 /* reusable components */
 /* ---------------------------------*/
 
-
-.row{
-    margin: 0 auto;
-}
-
 h1,h2,h3{
      text-align: center;
 }
 
 h1{
-    font-size: 60px;
+    font-size: 375%;
     margin-top: 35%;
-    
 }
 
 h2{
@@ -60,7 +55,7 @@ h2{
     text-align: center;
 }
 .btn-social{
-    color: #fff;
+    color: #000;
     font-size: 40px;
     padding: 5%;
     border: none;
@@ -79,13 +74,17 @@ header{
     height: 100vh;
 }
 
+header h1, header h2{
+    color: #fff;
+}
+
 
 .nav-btn{
     display: inline-block;
     color: #fff;
     font-size: 25px;
     font-weight: 100;
-    padding-top: 10px;
+    padding-top: 2%;
     margin-left: 90%;
     text-decoration: none;
 }
@@ -113,14 +112,24 @@ header{
 }
 
 .trial{
-    width: 200px;
-    margin: 10% 25%;
+    width: 170px;
+    margin: 15% 30%;
 }
 
 
 /* --------------------------------- */
 /* SECTION Movies*/
 /* ---------------------------------*/
+
+.movies{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.616), rgba(0, 0, 0, 0.616)),url(css/img/movies.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    height: 80vh;
+    width: 100%;
+    color: #fff;
+}
 
 .movies-text h2{
     font-size: 40px;
@@ -195,17 +204,151 @@ header{
 
 .footer{
     background-color: #332F2F;
+    color: #fff;
     width: 100%;
-    height: 30%;
+    height:5%;
     text-align: center;
 }
 
 .footer h4{
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 100;
     padding: 4%;
 }
 
 .footer i{
     color: #EF0606;
+}
+
+
+/* --------------------------------------------- */
+/* ---------------Media QUERIES-------------------*/
+/* -----------------------------------------------*/
+
+@media only screen and (min-width:760px){
+
+    h1,h2,h3{
+    text-align: center;
+    margin: 0;
+}
+
+/* --------------------------------- */
+/* SECTION MUSIC */
+/* ---------------------------------*/
+
+.music-text h2{
+    font-size: 40px;
+    margin-top: 2%;
+    padding: 2%;
+}
+
+.music-p{
+    font-size: 25px;
+    margin-bottom: 5%;
+}
+
+.music-text-box h3{
+    margin:5%;
+    font-size: 20px;
+}
+
+.trial{
+    margin: 2% 43% 5% 43%;
+}
+
+.icons h3{
+    margin: 0;
+}
+
+.btn-social{
+    font-size: 50px;
+    padding: 2%;
+}
+
+
+/* --------------------------------- */
+/* SECTION Movies*/
+/* ---------------------------------*/
+
+.movies{
+    height: 100vh;
+}
+
+.movies-text h2{
+    font-size: 30px;
+    margin: 5%;
+    padding: 2%;
+}
+
+.movies-text h3{
+    font-size: 40px;
+    font-weight: 100;
+    margin: 0 5% 5% 5%;
+    padding: 2%;
+
+}
+
+.read-more{
+    width: 170px;
+    margin: 5% 43% 2% 43%;
+}
+
+/* --------------------------------- */
+/* our plans*/
+/* ---------------------------------*/
+
+.plans-text h2{
+    font-size: 40px;
+    padding: 1%;
+}
+
+.flexbox-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.premium,
+.pro,
+.starter{
+    flex: 0 0 29%;
+}
+
+.premium,.pro,.starter{
+    margin: 2%;
+    padding: 2%;
+}
+
+.premium h3,.pro h3, .starter h3{
+    padding: 2% auto 0 auto;
+}
+
+.plan-price{
+    padding: 2%;
+}
+
+.premium li, .pro li, .starter li{
+    padding: 2%;
+}
+
+/* --------------------------------- */
+/* Last section*/
+/* ---------------------------------*/
+
+.last-section h1{
+    font-size: 30px;
+    margin: 5%;
+    padding: 2%;
+}
+
+/* --------------------------------- */
+/* Footer*/
+/* ---------------------------------*/
+
+footer h4{
+    font-size: 10px;
+    font-weight: 100;
+    padding: 1%;
+}
+
 }
